@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family:
+        "Lucida Grande"
+        ,"Hiragino Sans GB"
+        ,"WenQuanYi Micro Hei"
+        ,"Helvetica"
+        ,sans-serif;
+}
+
+.ty-cjk p {
+   line-height: 2rem;
+   text-indent: 1rem;
+   margin: 0;
+}
+
+.ty-cjk header+p {
+    text-indent: 0;
+}
+
+.ty-cjk ul
+,.ty-cjk ol {
+    margin: 0;
+    padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.ty-cjk li {
+    line-height: 1.5rem;
+    padding: 0.25rem;
+}
