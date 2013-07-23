@@ -20,6 +20,15 @@ body {
     text-indent: 0;
 }
 
+.ty-cjk h1 { font-size: 2rem; }
+.ty-cjk h2 { font-size: 1.5rem; }
+.ty-cjk h3 { font-size: 1rem; }
+
+.ty-cjk h2
+,.ty-cjk h3 {
+    line-height: 2rem;
+}
+
 .ty-cjk ul
 ,.ty-cjk ol {
     margin: 0;

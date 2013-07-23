@@ -2,8 +2,6 @@
 
 css framework for typography.
 
-めざせは武道館！！
-
 TODO:
 
 * pre, code
