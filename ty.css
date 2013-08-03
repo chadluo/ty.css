@@ -6,7 +6,8 @@
     padding: 0;
 }
 
-.ty-cjk p {
+.ty-cjk p
+,.ty-cjk blockquote {
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 0.25rem 0;
@@ -45,7 +46,7 @@
 
 .ty-cjk code
 ,.ty-cjk pre {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1rem;
 }
 
@@ -54,10 +55,15 @@
     padding: 1rem;
 }
 
+.ty-cjk blockquote {
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+}
+
 .ty-cjk hr {
     text-align: center;
-    line-height: 2rem;
-    height: 2rem;
+    line-height: 4rem;
+    height: 4rem;
     border: none;
 }
 
@@ -71,6 +77,4 @@
  * assert 1rem = 16px
  */
 
-/*
 body { background: url(8.png); }
-*/
