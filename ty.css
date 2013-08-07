@@ -1,61 +1,100 @@
-.ty-cjk p
-, .ty-cjk h1, .ty-cjk h2, .ty-cjk h3, .ty-cjk h4, .ty-cjk h5, .ty-cjk h6
-, .ty-cjk dl, .ty-cjk dt, .ty-cjk dd
-, .ty-cjk hr {
+/**
+ * Basic reset
+ */
+
+p,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+dl, dt, dd,
+hr {
     margin: 0;
     padding: 0;
 }
 
-.ty-cjk p
-,.ty-cjk blockquote {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 0.25rem 0;
-}
+ /* Common parts */
 
-.ty-cjk h1 {
+.ty-cjk h1,
+.ty-latin h1 {
     font-size: 2rem;
     line-height: 4rem;
 }
-.ty-cjk h2 {
+.ty-cjk h2,
+.ty-latin h2 {
     font-size: 1.5rem;
     line-height: 3.5rem;
 }
-.ty-cjk h3 {
+.ty-cjk h3,
+.ty-latin h3 {
     font-size: 1rem;
     line-height: 3rem;
 }
-.ty-cjk h4 {
+.ty-cjk h4,
+.ty-latin h4 {
+    font-size: 1rem;
+    line-height: 2rem;
+} 
+
+.ty-cjk pre,
+.ty-latin pre {
+    line-height: 1rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.ty-cjk hr,
+.ty-latin hr {
+    text-align: center;
+    line-height: 4rem;
+    height: 4rem;
+    border: none;
+}
+
+.ty-cjk hr:before,
+.ty-latin hr:before {
+    content: "kira~";
+    font-size: 1rem;
+}
+
+/**
+ * CJK, block chars
+ *
+ * larger line-height
+ * no extra space between p
+ * indent
+ */
+
+.ty-cjk p
+,.ty-cjk blockquote {
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.ty-cjk ul
-,.ty-cjk ol {
-    margin: 0;
-    padding: 0.25rem 0 0.25rem 2rem;
+.ty-cjk p+p {
+    text-indent: 1rem;
 }
 
-.ty-cjk li ul {
-    padding: 0 0 0 1rem;
+.ty-cjk ul,
+.ty-cjk ol {
+    padding: 0.75rem 0 0.75rem 2rem;
 }
 
 .ty-cjk li {
     line-height: 1.5rem;
 }
 
-.ty-cjk code
-,.ty-cjk pre {
-    line-height: 1rem;
+.ty-cjk-blocklist {
+    padding: 0.5rem 0 0.5rem 2rem;
 }
 
-.ty-cjk pre {
-    font-size: 0.9rem;
+.ty-cjk-blocklist li {
+    line-height: 1.5rem;
+    padding: 0.25rem 0;
 }
 
-.ty-cjk pre {
-    margin: 0.5rem 0;
-    padding: 1rem;
+.ty-cjk li ul,
+.ty-cjk li ol {
+    padding: 0 0 0 1rem;
 }
 
 .ty-cjk blockquote {
@@ -63,16 +102,32 @@
     padding: 0.75rem 1.5rem;
 }
 
-.ty-cjk hr {
-    text-align: center;
-    line-height: 4rem;
-    height: 4rem;
-    border: none;
+/**
+ * Latin, letters
+ *
+ * narrow line-heights
+ * extra space between lines
+ */
+
+.ty-latin p
+,.ty-latin blockquote {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.25rem 0;
 }
 
-.ty-cjk hr:before {
-    content: "***";
-    font-size: 1rem;
+.ty-latin ul,
+.ty-latin ol {
+    padding: 0.75rem 0 0.75rem 2rem;
+}
+
+.ty-latin li {
+    line-height: 1.5rem;
+}
+
+.ty-latin li ul,
+.ty-latin li ol {
+    padding: 0 0 0 1rem;
 }
 
 /* baseline alignment 
