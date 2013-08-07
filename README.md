@@ -1,4 +1,4 @@
-# ty.css
+# [ty.css](http://yukir.net/ty.css/)
 
 ---
 
