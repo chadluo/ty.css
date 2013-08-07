@@ -46,8 +46,11 @@
 
 .ty-cjk code
 ,.ty-cjk pre {
-    font-size: 0.8rem;
     line-height: 1rem;
+}
+
+.ty-cjk pre {
+    font-size: 0.9rem;
 }
 
 .ty-cjk pre {
