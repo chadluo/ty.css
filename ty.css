@@ -34,12 +34,22 @@ hr {
     line-height: 2rem;
 } 
 
+.ty-cjk code,
+.ty-latin code {
+    font-size: 1rem;
+    line-height: 1em;
+}
+
 .ty-cjk pre,
 .ty-latin pre {
-    line-height: 1rem;
-    font-size: 0.9rem;
     margin: 1rem 0;
     padding: 1rem;
+}
+
+.ty-cjk pre code,
+.ty-latin pre code {
+    line-height: 1rem;
+    font-size: 0.9rem;
 }
 
 .ty-cjk hr,
