@@ -62,7 +62,7 @@ hr {
 
 .ty-cjk hr:before,
 .ty-latin hr:before {
-    content: "kira~";
+    content: "*";
     font-size: 1rem;
 }
 
