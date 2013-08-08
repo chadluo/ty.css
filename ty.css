@@ -93,8 +93,8 @@ hr {
     line-height: 1.5rem;
 }
 
-.ty-cjk-blocklist {
-    padding: 0.5rem 0 0.5rem 2rem;
+.ty-cjk .ty-cjk-blocklist {
+    padding: 0.25rem 0 0.25rem 2rem;
 }
 
 .ty-cjk-blocklist li {
