@@ -6,6 +6,7 @@ p,
 h1, h2, h3, h4, h5, h6,
 ul, ol, li,
 dl, dt, dd,
+strong,
 hr {
     margin: 0;
     padding: 0;
@@ -49,7 +50,7 @@ hr {
 .ty-cjk pre code,
 .ty-latin pre code {
     line-height: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .ty-cjk hr,
@@ -74,8 +75,8 @@ hr {
  * indent
  */
 
-.ty-cjk p
-,.ty-cjk blockquote {
+.ty-cjk p,
+.ty-cjk blockquote {
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -89,6 +90,8 @@ hr {
     padding: 0.75rem 0 0.75rem 2rem;
 }
 
+.ty-cjk ul,
+.ty-cjk ol,
 .ty-cjk li {
     line-height: 1.5rem;
 }
@@ -110,6 +113,10 @@ hr {
 .ty-cjk blockquote {
     margin: 0;
     padding: 0.75rem 1.5rem;
+}
+
+.ty-cjk strong {
+    line-height: 1rem;
 }
 
 /**
