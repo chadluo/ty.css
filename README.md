@@ -10,10 +10,16 @@ css framework for out-of-box typography.
   
   matches a 8px baseline system, which is half of default browser font size
 
++ fail-safe max width
+
+  50 letters wide
+
 **what it ignores:**
 
 - global css reset
 - grid system
+- ruby
+- vertical typography
 
 please use with other parts.
 
@@ -36,12 +42,20 @@ see license.md
 
   对齐浏览器默认字号的一半即 8px 的基线系统
 
+* 最低限度的宽度设置
+
+  你要是敢超过 50 字宽我就跳出屏幕削你。
+
 没了。
 
 **它不干什么活：**
 
 * css reset
 * 格栅系统
+* ruby
+* 竖排
+
+ 你以为我不想啊。
 
 请自行搭配你惯用的框架。照说这些东西都是只管宽度的所以跟我这应该不冲突吧大概。
 
@@ -53,4 +67,4 @@ see license.md
 
 **授权**
 
-见 license.md。
+见 LICENSE.md。
