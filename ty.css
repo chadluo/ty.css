@@ -58,7 +58,11 @@ hr {
 }
 
 .ty-cjk p + p,
-.ty-latin p + p {
+.ty-cjk blockquote + p,
+.ty-cjk pre + p,
+.ty-latin p + p,
+.ty-latin blockquote + p,
+.ty-latin pre + p {
     text-indent: 1rem;
 }
 
@@ -163,7 +167,7 @@ hr {
  * suggest: different font for em under CJK
  *
    .ty-cjk em {
-   font-family: serif;
+       font-family: serif;
    }
  *
  */
