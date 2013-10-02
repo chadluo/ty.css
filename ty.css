@@ -1,5 +1,6 @@
-/***************************************
+/**
  * ty.css
+ * http://github.com/chadluo/ty.css
  *
  * author yukirock<i@yukir.net>
  *
@@ -15,7 +16,11 @@
  *
    <article class="ty-latin">
  *
- **************************************/
+ */
+
+
+
+
 
 /**
  * Basic reset
@@ -31,6 +36,10 @@ hr {
     padding: 0;
 }
 
+
+
+
+
 /**
  * Common parts
  */
@@ -43,14 +52,23 @@ hr {
 .ty-cjk .intro,
 .ty-latin .intro {
     text-indent: 0;
-    font-size: calc(1em + 2px);
+    font-size: calc(1rem + 2px);
     position: relative;
     top: -1px;
 }
 
+.ty-cjk p + p,
+.ty-cjk blockquote + p,
+.ty-cjk pre + p,
+.ty-latin p + p,
+.ty-latin blockquote + p,
+.ty-latin pre + p {
+    text-indent: 1rem;
+}
+
+
 .ty-cjk code,
 .ty-latin code {
-    font-size: 0.9rem;
     line-height: 1em;
 }
 
@@ -73,7 +91,12 @@ hr {
     content: "＊";
     font-size: 1rem;
     font-family: serif;
+    opacity: 0.5;
 }
+
+
+
+
 
 /**
  * CJK block chars
@@ -81,15 +104,18 @@ hr {
 
 .ty-cjk h1 {
     font-size: 2rem;
-    line-height: 4rem;
+    line-height: 2.5rem;
+    padding: 1.25rem 0;
 }
 .ty-cjk h2 {
     font-size: 1.5rem;
-    line-height: 3.5rem;
+    line-height: 2rem;
+    padding: 1.25rem 0;
 }
 .ty-cjk h3 {
     font-size: 1rem;
-    line-height: 3rem;
+    line-height: 1.5rem;
+    padding: 1.25rem 0;
 }
 .ty-cjk h4 {
     font-size: 1rem;
@@ -100,10 +126,6 @@ hr {
 .ty-cjk blockquote {
     font-size: 1rem;
     line-height: 2rem;
-}
-
-.ty-cjk p+p {
-    text-indent: 1rem;
 }
 
 .ty-cjk ul,
@@ -141,9 +163,22 @@ hr {
     padding: 1rem;
 }
 
+/**
+ * suggest: different font for em under CJK
+ *
+   .ty-cjk em {
+       font-family: serif;
+   }
+ *
+ */
+
 .ty-cjk strong {
     line-height: 1rem;
 }
+
+
+
+
 
 /**
  * Latin, letters
@@ -157,29 +192,25 @@ hr {
 
 .ty-latin h1 {
     font-size: 2rem;
-    line-height: 3.5rem;
+    line-height: 5.5rem;
 }
 .ty-latin h2 {
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 5rem;
 }
 .ty-latin h3 {
     font-size: 1rem;
-    line-height: 2.5rem;
+    line-height: 4.5rem;
 }
 .ty-latin h4 {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 3.5rem;
 }
 
 .ty-latin p
 ,.ty-latin blockquote {
     font-size: 1rem;
     line-height: 1.5rem;
-}
-
-.ty-latin p + p {
-    text-indent: 1rem;
 }
 
 .ty-latin ul,
@@ -194,6 +225,10 @@ hr {
 .ty-latin li ul,
 .ty-latin li ol {
     padding: 0 0 0 1rem;
+}
+
+.ty-latin-blocklist li {
+    padding-top: 0.5rem;
 }
 
 .ty-latin pre {
