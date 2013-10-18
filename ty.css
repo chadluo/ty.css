@@ -122,8 +122,9 @@ hr {
     line-height: 2rem;
 }
 
-.ty-cjk p,
-.ty-cjk blockquote {
+.ty-cjk p
+,.ty-cjk blockquote
+,.ty-cjk address {
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -208,7 +209,8 @@ hr {
 }
 
 .ty-latin p
-,.ty-latin blockquote {
+,.ty-latin blockquote
+,.ty-latin address {
     font-size: 1rem;
     line-height: 1.5rem;
 }
