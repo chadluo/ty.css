@@ -4,23 +4,7 @@
  *
  * author yukirock<i@yukir.net>
  *
- * providing basic typographic styles.
- * mainly on CJK.
- * compress the way you prefer.
- *
- * usage:
- *
-   <article class="ty-cjk">
- *
- * or
- *
-   <article class="ty-latin">
- *
  */
-
-
-
-
 
 /**
  * Basic reset
@@ -44,50 +28,34 @@ hr {
  * Common parts
  */
 
-.ty-cjk,
-.ty-latin {
+.ty-basic {
     max-width: 50rem;
 }
 
-.ty-cjk .intro,
-.ty-latin .intro {
+.ty-basic .intro {
     text-indent: 0;
     font-size: calc(1rem + 2px);
     position: relative;
     top: -1px;
 }
 
-.ty-cjk p + p,
-.ty-cjk blockquote + p,
-.ty-cjk pre + p,
-.ty-latin p + p,
-.ty-latin blockquote + p,
-.ty-latin pre + p {
-    text-indent: 1rem;
-}
-
-
-.ty-cjk code,
-.ty-latin code {
+.ty-basic code {
     line-height: 1em;
 }
 
-.ty-cjk pre code,
-.ty-latin pre code {
+.ty-basic pre code {
     font-size: 0.8rem;
     line-height: 1rem;
 }
 
-.ty-cjk hr,
-.ty-latin hr {
+.ty-basic hr {
     text-align: center;
     line-height: 4rem;
     height: 4rem;
     border: none;
 }
 
-.ty-cjk hr:before,
-.ty-latin hr:before {
+.ty-basic hr:before {
     content: "＊";
     font-size: 1rem;
     font-family: serif;
@@ -99,81 +67,91 @@ hr {
 
 
 /**
- * CJK block chars
+ * behavior between consecutive paragraphs.
+ */
+.ty-indent p + p,
+.ty-indent blockquote + p,
+.ty-indent pre + p {
+    text-indent: 1rem;
+}
+.ty-break p + p,
+.ty-break blockquote + p,
+.ty-break pre + p {
+    margin-top: 1em;
+}
+
+
+
+
+
+
+/**
+ * Higher line heights (2.0)
  */
 
-.ty-cjk h1 {
+.ty-wide h1 {
     font-size: 2rem;
     line-height: 2.5rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h2 {
+.ty-wide h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h3 {
+.ty-wide h3 {
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h4 {
+.ty-wide h4 {
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.ty-cjk p
-,.ty-cjk blockquote
-,.ty-cjk address {
+.ty-wide p
+,.ty-wide blockquote
+,.ty-wide address {
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.ty-cjk ul,
-.ty-cjk ol {
+.ty-wide ul,
+.ty-wide ol {
     padding: 0.75rem 0 0.75rem 2rem;
 }
 
-.ty-cjk ul,
-.ty-cjk ol,
-.ty-cjk li {
+.ty-wide ul,
+.ty-wide ol,
+.ty-wide li {
     line-height: 1.5rem;
 }
 
-.ty-cjk .ty-cjk-blocklist {
+.ty-wide .ty-wide-blocklist {
     padding: 0.25rem 0 0.25rem 2rem;
 }
 
-.ty-cjk-blocklist li {
+.ty-wide-blocklist li {
     line-height: 1.5rem;
     padding: 0.25rem 0;
 }
 
-.ty-cjk li ul,
-.ty-cjk li ol {
+.ty-wide li ul,
+.ty-wide li ol {
     padding: 0 0 0 1rem;
 }
 
-.ty-cjk blockquote {
+.ty-wide blockquote {
     margin: 0.75rem -1rem;
     padding: 0.75rem 0.5rem 0.75rem 3rem;
 }
 
-.ty-cjk pre {
+.ty-wide pre {
     margin: 1rem 0;
     padding: 1rem;
 }
 
-/**
- * suggest: different font for em under CJK
- *
-   .ty-cjk em {
-       font-family: serif;
-   }
- *
- */
-
-.ty-cjk strong {
+.ty-wide strong {
     line-height: 1rem;
 }
 
@@ -182,58 +160,56 @@ hr {
 
 
 /**
- * Latin, letters
- *
- * narrow line-heights
+ * narrow line-heights (1.5)
  */
 
-.ty-latin {
+.ty-narrow {
     padding: 0.25rem 0;
 }
 
-.ty-latin h1 {
+.ty-narrow h1 {
     font-size: 2rem;
     line-height: 5.5rem;
 }
-.ty-latin h2 {
+.ty-narrow h2 {
     font-size: 1.5rem;
     line-height: 5rem;
 }
-.ty-latin h3 {
+.ty-narrow h3 {
     font-size: 1rem;
     line-height: 4.5rem;
 }
-.ty-latin h4 {
+.ty-narrow h4 {
     font-size: 1rem;
     line-height: 3.5rem;
 }
 
-.ty-latin p
-,.ty-latin blockquote
-,.ty-latin address {
+.ty-narrow p
+,.ty-narrow blockquote
+,.ty-narrow address {
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
-.ty-latin ul,
-.ty-latin ol {
+.ty-narrow ul,
+.ty-narrow ol {
     padding: 0.5rem 0 0.5rem 2rem;
 }
 
-.ty-latin li {
+.ty-narrow li {
     line-height: 1.5rem;
 }
 
-.ty-latin li ul,
-.ty-latin li ol {
+.ty-narrow li ul,
+.ty-narrow li ol {
     padding: 0 0 0 1rem;
 }
 
-.ty-latin-blocklist li {
+.ty-narrow-blocklist li {
     padding-top: 0.5rem;
 }
 
-.ty-latin pre {
+.ty-narrow pre {
     margin: 0.75rem 0;
     padding: 1rem;
 }
