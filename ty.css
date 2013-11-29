@@ -6,10 +6,21 @@
  *
  */
 
-/**
- * Basic reset
- */
 
+
+
+
+/**
+ * normalize.min.css 2.1.3
+ * typography parts removed.
+ */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+
+
+
+
+/* basic reset */
 p,
 h1, h2, h3, h4, h5, h6,
 ul, ol, li,
@@ -25,7 +36,10 @@ hr {
 
 
 /**
- * Common parts
+ * .ty-basic
+ *
+ * default styles, 1.5 line-height, paragraph spacing.
+ * ready for overriden.
  */
 
 .ty-basic {
@@ -50,8 +64,8 @@ hr {
 
 .ty-basic hr {
     text-align: center;
-    line-height: 4rem;
-    height: 4rem;
+    line-height: 2rem;
+    height: 2rem;
     border: none;
 }
 
@@ -62,21 +76,64 @@ hr {
     opacity: 0.5;
 }
 
+/* basic 1.5 line-height */
 
-
-
-
-/**
- * behavior between consecutive paragraphs.
- */
-.ty-indent p + p,
-.ty-indent blockquote + p,
-.ty-indent pre + p {
-    text-indent: 1rem;
+.ty-basic {
+    padding: 0.25rem 0;
 }
-.ty-break p + p,
-.ty-break blockquote + p,
-.ty-break pre + p {
+
+.ty-basic h1 {
+    font-size: 2rem;
+    line-height: 5.5rem;
+}
+.ty-basic h2 {
+    font-size: 1.5rem;
+    line-height: 5rem;
+}
+.ty-basic h3 {
+    font-size: 1rem;
+    line-height: 4.5rem;
+}
+.ty-basic h4 {
+    font-size: 1rem;
+    line-height: 3.5rem;
+}
+
+.ty-basic p
+,.ty-basic blockquote
+,.ty-basic address {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ty-basic ul,
+.ty-basic ol {
+    padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.ty-basic li {
+    line-height: 1.5rem;
+}
+
+.ty-basic li ul,
+.ty-basic li ol {
+    padding: 0 0 0 1rem;
+}
+
+.ty-basic-blocklist li {
+    padding-top: 0.5rem;
+}
+
+.ty-basic pre {
+    margin: 0.75rem 0;
+    padding: 1rem;
+}
+
+/* spaces as paragraph separators */
+
+.ty-basic p + p,
+.ty-basic blockquote + p,
+.ty-basic pre + p {
     margin-top: 1em;
 }
 
@@ -84,10 +141,7 @@ hr {
 
 
 
-
-/**
- * Higher line heights (2.0)
- */
+/* wider 2.0 line-height */
 
 .ty-wide h1 {
     font-size: 2rem;
@@ -109,9 +163,9 @@ hr {
     line-height: 2rem;
 }
 
-.ty-wide p
-,.ty-wide blockquote
-,.ty-wide address {
+.ty-wide p,
+.ty-wide blockquote,
+.ty-wide address {
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -159,57 +213,11 @@ hr {
 
 
 
-/**
- * narrow line-heights (1.5)
- */
+/* indent as paragraph seperators */
 
-.ty-narrow {
-    padding: 0.25rem 0;
-}
-
-.ty-narrow h1 {
-    font-size: 2rem;
-    line-height: 5.5rem;
-}
-.ty-narrow h2 {
-    font-size: 1.5rem;
-    line-height: 5rem;
-}
-.ty-narrow h3 {
-    font-size: 1rem;
-    line-height: 4.5rem;
-}
-.ty-narrow h4 {
-    font-size: 1rem;
-    line-height: 3.5rem;
-}
-
-.ty-narrow p
-,.ty-narrow blockquote
-,.ty-narrow address {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
-.ty-narrow ul,
-.ty-narrow ol {
-    padding: 0.5rem 0 0.5rem 2rem;
-}
-
-.ty-narrow li {
-    line-height: 1.5rem;
-}
-
-.ty-narrow li ul,
-.ty-narrow li ol {
-    padding: 0 0 0 1rem;
-}
-
-.ty-narrow-blocklist li {
-    padding-top: 0.5rem;
-}
-
-.ty-narrow pre {
-    margin: 0.75rem 0;
-    padding: 1rem;
+.ty-indent p + p,
+.ty-indent blockquote + p,
+.ty-indent pre + p {
+    margin-top: 0;
+    text-indent: 1rem;
 }
