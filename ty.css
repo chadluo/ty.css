@@ -4,18 +4,6 @@
  *
  * author yukirock<i@yukir.net>
  *
- * providing basic typographic styles.
- * mainly on CJK.
- * compress the way you prefer.
- *
- * usage:
- *
-   <article class="ty-cjk">
- *
- * or
- *
-   <article class="ty-latin">
- *
  */
 
 
@@ -23,9 +11,16 @@
 
 
 /**
- * Basic reset
+ * normalize.css v3.0.1 | git.io/normalize 
+ * some typographic parts removed
  */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+
+
+
+
+/* basic reset */
 p,
 h1, h2, h3, h4, h5, h6,
 ul, ol, li,
@@ -36,144 +31,192 @@ hr {
     padding: 0;
 }
 
+@media screen,handheld {
+    body { font-size: 16px; }
+}
+
+@media print {
+    body { font-size: 12pt; }
+}
 
 
 
 
 /**
- * Common parts
+ * .ty-basic
+ *
+ * default styles, 1.5 line-height, paragraph spacing.
+ * ready for overriden.
  */
+ 
+/* maintain considerate width */
 
-.ty-cjk,
-.ty-latin {
+.ty-basic {
     max-width: 50rem;
 }
 
-.ty-cjk .intro,
-.ty-latin .intro {
+/* highlighted paragraph */
+
+.ty-basic .intro {
     text-indent: 0;
     font-size: calc(1rem + 2px);
     position: relative;
     top: -1px;
 }
 
-.ty-cjk p + p,
-.ty-cjk blockquote + p,
-.ty-cjk pre + p,
-.ty-latin p + p,
-.ty-latin blockquote + p,
-.ty-latin pre + p {
-    text-indent: 1rem;
-}
-
-
-.ty-cjk code,
-.ty-latin code {
+.ty-basic code {
     line-height: 1em;
 }
 
-.ty-cjk pre code,
-.ty-latin pre code {
+.ty-basic pre code {
     font-size: 0.8rem;
     line-height: 1rem;
 }
 
-.ty-cjk hr,
-.ty-latin hr {
+.ty-basic hr {
     text-align: center;
-    line-height: 4rem;
-    height: 4rem;
+    line-height: 2rem;
+    height: 2rem;
     border: none;
 }
 
-.ty-cjk hr:before,
-.ty-latin hr:before {
+.ty-basic hr:before {
     content: "＊";
     font-size: 1rem;
     font-family: serif;
     opacity: 0.5;
 }
 
+/* basic 1.5 line-height */
+
+.ty-basic {
+    padding: 0.25rem 0;
+}
+
+.ty-basic h1 {
+    font-size: 2rem;
+    line-height: 5.5rem;
+}
+.ty-basic h2 {
+    font-size: 1.5rem;
+    line-height: 5rem;
+}
+.ty-basic h3 {
+    font-size: 1rem;
+    line-height: 4.5rem;
+}
+.ty-basic h4 {
+    font-size: 1rem;
+    line-height: 3.5rem;
+}
+
+.ty-basic p
+,.ty-basic blockquote
+,.ty-basic address {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.ty-basic ul,
+.ty-basic ol {
+    padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.ty-basic li {
+    line-height: 1.5rem;
+}
+
+.ty-basic li ul,
+.ty-basic li ol {
+    padding: 0 0 0 1rem;
+}
+
+.ty-basic-blocklist li {
+    padding-top: 0.5rem;
+}
+
+.ty-basic pre {
+    margin: 0.75rem 0;
+    padding: 1rem;
+}
+
+/* spaces as paragraph separators */
+
+.ty-basic p + p,
+.ty-basic blockquote + p,
+.ty-basic pre + p {
+    margin-top: 1em;
+}
 
 
 
 
-/**
- * CJK block chars
- */
 
-.ty-cjk h1 {
+/* wider 2.0 line-height */
+
+.ty-wide h1 {
     font-size: 2rem;
     line-height: 2.5rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h2 {
+.ty-wide h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h3 {
+.ty-wide h3 {
     font-size: 1rem;
     line-height: 1.5rem;
     padding: 1.25rem 0;
 }
-.ty-cjk h4 {
+.ty-wide h4 {
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.ty-cjk p
-,.ty-cjk blockquote
-,.ty-cjk address {
+.ty-wide p,
+.ty-wide blockquote,
+.ty-wide address {
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.ty-cjk ul,
-.ty-cjk ol {
+.ty-wide ul,
+.ty-wide ol {
     padding: 0.75rem 0 0.75rem 2rem;
 }
 
-.ty-cjk ul,
-.ty-cjk ol,
-.ty-cjk li {
+.ty-wide ul,
+.ty-wide ol,
+.ty-wide li {
     line-height: 1.5rem;
 }
 
-.ty-cjk .ty-cjk-blocklist {
+.ty-wide .ty-wide-blocklist {
     padding: 0.25rem 0 0.25rem 2rem;
 }
 
-.ty-cjk-blocklist li {
+.ty-wide-blocklist li {
     line-height: 1.5rem;
     padding: 0.25rem 0;
 }
 
-.ty-cjk li ul,
-.ty-cjk li ol {
+.ty-wide li ul,
+.ty-wide li ol {
     padding: 0 0 0 1rem;
 }
 
-.ty-cjk blockquote {
+.ty-wide blockquote {
     margin: 0.75rem -1rem;
     padding: 0.75rem 0.5rem 0.75rem 3rem;
 }
 
-.ty-cjk pre {
+.ty-wide pre {
     margin: 1rem 0;
     padding: 1rem;
 }
 
-/**
- * suggest: different font for em under CJK
- *
-   .ty-cjk em {
-       font-family: serif;
-   }
- *
- */
-
-.ty-cjk strong {
+.ty-wide strong {
     line-height: 1rem;
 }
 
@@ -181,59 +224,11 @@ hr {
 
 
 
-/**
- * Latin, letters
- *
- * narrow line-heights
- */
+/* indent as paragraph seperators */
 
-.ty-latin {
-    padding: 0.25rem 0;
-}
-
-.ty-latin h1 {
-    font-size: 2rem;
-    line-height: 5.5rem;
-}
-.ty-latin h2 {
-    font-size: 1.5rem;
-    line-height: 5rem;
-}
-.ty-latin h3 {
-    font-size: 1rem;
-    line-height: 4.5rem;
-}
-.ty-latin h4 {
-    font-size: 1rem;
-    line-height: 3.5rem;
-}
-
-.ty-latin p
-,.ty-latin blockquote
-,.ty-latin address {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
-.ty-latin ul,
-.ty-latin ol {
-    padding: 0.5rem 0 0.5rem 2rem;
-}
-
-.ty-latin li {
-    line-height: 1.5rem;
-}
-
-.ty-latin li ul,
-.ty-latin li ol {
-    padding: 0 0 0 1rem;
-}
-
-.ty-latin-blocklist li {
-    padding-top: 0.5rem;
-}
-
-.ty-latin pre {
-    margin: 0.75rem 0;
-    padding: 1rem;
+.ty-indent p + p,
+.ty-indent blockquote + p,
+.ty-indent pre + p {
+    margin-top: 0;
+    text-indent: 1rem;
 }
