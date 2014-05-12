@@ -1,0 +1,4 @@
+body { margin: 0; padding: 0; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsdBTkoii38qQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAFElEQVQY02NgGBGA8eHDh//xKQAAb8kDpCPz/AoAAAAASUVORK5CYII='); font-family: "Lucida Grande","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif }
+.ty { width: 40rem; margin: auto; background: rgba(255,255,255,0.6); padding-left: 2rem; padding-right: 2rem; }
+.ty pre { background: #EEE; box-shadow: 0 0 10px #AAA inset }
+

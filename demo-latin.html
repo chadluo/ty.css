@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>CSS Guidelines as sample for ty.css</title>
-<link rel="stylesheet" href="ty.css" media="screen" type="text/css">
-<style type="text/css">
-body { margin: 0; padding: 0; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsdBTkoii38qQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAFElEQVQY02NgGBGA8eHDh//xKQAAb8kDpCPz/AoAAAAASUVORK5CYII='); font-family: "Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif }
-.ty-basic { width: 40%; background: rgba(255,255,255,0.6); margin: auto }
-.ty-basic pre { background: #EEE; box-shadow: 0 0 10px #AAA inset }
-</style>
+<link rel="stylesheet" href="ty.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-<section class="ty-basic ty-indent">
-  <p class="ty__intro">content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.</p>
+<section class="ty">
+  <p class="intro">content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.content from <a href="https://github.com/csswizardry/CSS-Guidelines">csswizardry/CSS-Guidelines</a>.</p>
   <hr>
   <h1>
     <a name="general-css-notes-advice-and-guidelines" class="anchor" href="#general-css-notes-advice-and-guidelines"><span class="octicon octicon-link"></span></a>General CSS notes, advice and guidelines</h1>
@@ -138,8 +134,7 @@ body { margin: 0; padding: 0; background: url('data:image/png;base64,iVBORw0KGgo
  * CONTENTS............You’re reading it!
  * RESET...............Set our reset defaults
  * FONT-FACE...........Import brand font files
- */
-  </code></pre>
+ */</code></pre>
 
   <p>This will tell the next developer(s) exactly what they can expect to find in
   this file. Each item in the table of contents maps directly to a section title.</p>
@@ -156,8 +151,7 @@ body { margin: 0; padding: 0; background: url('data:image/png;base64,iVBORw0KGgo
 
   <pre><code>/*------------------------------------*\
     $RESET
-\*------------------------------------*/
-  </code></pre>
+\*------------------------------------*/</code></pre>
 
   <p>The <code>$</code> prefixing the name of the section allows us to run a find ([Cmd|Ctrl]+F)
   for <code>$[SECTION-NAME]</code> and <strong>limit our search scope to section titles only</strong>.</p>
@@ -178,8 +172,7 @@ styles]
 
 /*------------------------------------*\
     $FONT-FACE
-\*------------------------------------*/
-  </code></pre>
+\*------------------------------------*/</code></pre>
 
   <p>This large chunk of whitespace is quickly noticeable when scrolling quickly
   through larger files.</p>
@@ -220,8 +213,7 @@ styles]
   <pre><code>[selector]{
     [property]:[value];
     [&lt;- Declaration -&gt;]
-}
-  </code></pre>
+}</code></pre>
 
   <p>I have a number of standards when structuring rulesets.</p>
 
@@ -252,8 +244,7 @@ styles]
         margin-right:-10px;
         margin-left: -10px;
         padding:0.25em;
-    }
-  </code></pre>
+    }</code></pre>
 
   <p>Here we can see that <code>.widget-heading</code> must be a child of <code>.widget</code> as we have
   indented the <code>.widget-heading</code> ruleset one level deeper than <code>.widget</code>. This is
@@ -278,8 +269,7 @@ styles]
 .t70    { width:70% }
 .t75    { width:75% }       /* 3/4*/
 .t80    { width:80% }
-.t90    { width:90% }
-  </code></pre>
+.t90    { width:90% }</code></pre>
 
   <p>In this example (from <a href="https://github.com/csswizardry/inuit.css/blob/master/inuit.css/partials/base/_tables.scss#L88">inuit.css’s table grid system</a>)
   it makes more sense to single-line our CSS.</p>
@@ -299,8 +289,7 @@ styles]
 
   <pre><code>.block{}
 .block__element{}
-.block--modifier{}
-  </code></pre>
+.block--modifier{}</code></pre>
 
   <ul>
     <li>
@@ -316,8 +305,7 @@ styles]
 .person--woman{}
     .person__hand{}
     .person__hand--left{}
-    .person__hand--right{}
-  </code></pre>
+    .person__hand--right{}</code></pre>
 
   <p>Here we can see that the basic object we’re describing is a person, and that a
   different type of person might be a woman. We can also see that people have
@@ -351,8 +339,7 @@ styles]
   <p>In a bid to make things easier to read, separate classes in your HTML with two
   (2) spaces, thus:</p>
 
-  <pre><code>&lt;div class="foo--bar  bar__baz"&gt;
-  </code></pre>
+  <pre><code>&lt;div class="foo--bar  bar__baz"&gt;</code></pre>
 
   <p>This increased whitespace should hopefully allow for easier spotting and reading
   of multiple classes.</p>
@@ -369,8 +356,7 @@ styles]
   be any troublesome overlap.</p>
 
   <pre><code>&lt;th class="is-sortable  js-is-sortable"&gt;
-&lt;/th&gt;
-  </code></pre>
+&lt;/th&gt;</code></pre>
 
   <p>The above markup holds two classes; one to which you can attach some styling for
   sortable table columns and another which allows you to add the sorting
@@ -388,8 +374,7 @@ styles]
 
   <pre><code>.color-picker,
 .colour-picker{
-}
-  </code></pre>
+}</code></pre>
 
   <p>However, having recently worked on a very large Sass project where there were
   dozens of colour variables (e.g. <code>$brand-color</code>, <code>$highlight-color</code> etc.),
@@ -418,8 +403,7 @@ styles]
  *
  * We do not prefix lines of code with an asterisk as to do so would inhibit
  * copy and paste.
- */
-  </code></pre>
+ */</code></pre>
 
   <p>You should document and comment our code as much as you possibly can, what may
   seem or feel transparent and self explanatory to you may not be to another dev.
@@ -453,8 +437,7 @@ styles]
   <p>By quasi-qualifying this selector (i.e. commenting out the leading type
   selector) we can communicate where we wish to have this class applied, thus:</p>
 
-  <pre><code>/*html*/.product-page{}
-  </code></pre>
+  <pre><code>/*html*/.product-page{}</code></pre>
 
   <p>We can now see exactly where to apply this class but with none of the
   specificity or non-reusability drawbacks.</p>
@@ -463,8 +446,7 @@ styles]
 
   <pre><code>/*ol*/.breadcrumb{}
 /*p*/.intro{}
-/*ul*/.image-thumbs{}
-  </code></pre>
+/*ul*/.image-thumbs{}</code></pre>
 
   <p>Here we can see where we intend each of these classes to be applied without
   actually ever impacting the specificity of the selectors.</p>
@@ -483,8 +465,7 @@ styles]
 /**
  * ^grids ^lists ^tables
  */
-.matrix{}
-  </code></pre>
+.matrix{}</code></pre>
 
   <p>These tags allow other developers to find snippets of code by searching for
   function; if a developer needs to work with lists they can run a find for
@@ -505,16 +486,14 @@ styles]
   <pre><code>/**
  * Extend `.foo` in theme.css
  */
- .foo{}
-  </code></pre>
+ .foo{}</code></pre>
 
   <p>In your theme stylesheet:</p>
 
   <pre><code>/**
  * Extends `.foo` in base.css
  */
- .bar{}
-  </code></pre>
+ .bar{}</code></pre>
 
   <p>Here we have established a concrete relationship between two very separate
   pieces of code.</p>
@@ -546,8 +525,7 @@ styles]
 
 .room--kitchen{}
 .room--bedroom{}
-.room--bathroom{}
-  </code></pre>
+.room--bathroom{}</code></pre>
 
   <p>We have several types of room in a house, but they all share similar traits;
   they all have floors, ceilings, walls and doors. We can share this information
@@ -608,8 +586,7 @@ styles]
   <pre><code>@mixin font-size($font-size){
     font-size:$font-size +px;
     font-size:$font-size / $base-font-size +rem;
-}
-  </code></pre>
+}</code></pre>
 
   <p>I only use pixels for items whose dimensions were defined before the came into
   the site. This includes things like images and sprites whose dimensions are
@@ -814,8 +791,7 @@ styles]
   <pre><code>.header{}
 .header .site-nav{}
 .header .site-nav li{}
-.header .site-nav li a{}
-  </code></pre>
+.header .site-nav li a{}</code></pre>
 
   <p>Would be wholly unnecessary in normal CSS, so the following would be <strong>bad</strong>
   Sass:</p>
@@ -826,8 +802,7 @@ styles]
             a{}
         }
     }
-}
-  </code></pre>
+}</code></pre>
 
   <p>If you were to Sass this up you’d write it as:</p>
 
@@ -835,8 +810,7 @@ styles]
 .site-nav{
     li{}
     a{}
-}
-  </code></pre>
+}</code></pre>
 </section>
 </body>
 </html>
