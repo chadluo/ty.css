@@ -2,233 +2,212 @@
  * ty.css
  * http://github.com/chadluo/ty.css
  *
- * author yukirock<i@yukir.net>
+ * @author yukirock<i@yukir.net>
  *
  */
 
 
-
-
-
 /**
- * normalize.css v3.0.1 | git.io/normalize 
+ * normalize.css v3.0.1 | http://git.io/normalize
  * some typographic parts removed
  */
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
 
-
-
-
-/* basic reset */
-p,
-h1, h2, h3, h4, h5, h6,
-ul, ol, li,
-dl, dt, dd,
-strong,
-hr {
-    margin: 0;
-    padding: 0;
-}
-
-@media screen,handheld {
-    body { font-size: 16px; }
-}
-
-@media print {
-    body { font-size: 12pt; }
-}
-
-
-
+/**
+ * font size reset
+ */
+@media screen,handheld { body { font-size: 16px; } }
+@media print           { body { font-size: 12pt; } }
 
 /**
- * .ty-basic
+ * basic .ty
  *
- * default styles, 1.5 line-height, paragraph spacing.
- * ready for overriden.
+ * default styles:
+ *   1.5 line-height
+ *   indent
  */
- 
-/* maintain considerate width */
-
-.ty-basic {
-    max-width: 50rem;
-}
-
-/* highlighted paragraph */
-
-.ty-basic .intro {
-    text-indent: 0;
-    font-size: calc(1rem + 2px);
-    position: relative;
-    top: -1px;
-}
-
-.ty-basic code {
-    line-height: 1em;
-}
-
-.ty-basic pre code {
-    font-size: 0.8rem;
-    line-height: 1rem;
-}
-
-.ty-basic hr {
-    text-align: center;
-    line-height: 2rem;
-    height: 2rem;
-    border: none;
-}
-
-.ty-basic hr:before {
-    content: "＊";
-    font-size: 1rem;
-    font-family: serif;
-    opacity: 0.5;
-}
 
 /* basic 1.5 line-height */
 
-.ty-basic {
-    padding: 0.25rem 0;
+
+.ty {
+    padding-top:    0.25rem;
+    padding-bottom: 0.25rem;
 }
 
-.ty-basic h1 {
-    font-size: 2rem;
-    line-height: 5.5rem;
+.ty h1 {
+    font-size:      2rem;
+    line-height:    2.5rem;
+    padding-top:    1rem;
+    padding-bottom: 1rem;
+    margin-top:     0;
+    margin-bottom:  0;
 }
-.ty-basic h2 {
-    font-size: 1.5rem;
-    line-height: 5rem;
+.ty h2 {
+    font-size:      1.5rem;
+    line-height:    2rem;
+    padding-top:    1rem;
+    padding-bottom: 1rem;
+    margin-top:     0;
+    margin-bottom:  0;
 }
-.ty-basic h3 {
-    font-size: 1rem;
-    line-height: 4.5rem;
+.ty h3 {
+    font-size:      1rem;
+    line-height:    2rem;
+    padding-top:    0.25rem;
+    padding-bottom: 0.25rem;
+    margin-top:     0;
+    margin-bottom:  0;
 }
-.ty-basic h4 {
-    font-size: 1rem;
-    line-height: 3.5rem;
-}
-
-.ty-basic p
-,.ty-basic blockquote
-,.ty-basic address {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
-.ty-basic ul,
-.ty-basic ol {
-    padding: 0.5rem 0 0.5rem 2rem;
-}
-
-.ty-basic li {
-    line-height: 1.5rem;
-}
-
-.ty-basic li ul,
-.ty-basic li ol {
-    padding: 0 0 0 1rem;
+.ty h4 {
+    font-size:      1rem;
+    line-height:    1.5rem;
+    margin-top:     0.5rem;
+    margin-bottom:  0.5rem;
+    padding-top:    0.25rem;
+    padding-bottom: 0.25rem;
 }
 
-.ty-basic-blocklist li {
-    padding-top: 0.5rem;
+.ty p,
+.ty blockquote,
+.ty address {
+    font-size:      1rem;
+    line-height:    1.5rem;
+    margin-top:     0;
+    margin-bottom:  0;
 }
 
-.ty-basic pre {
-    margin: 0.75rem 0;
-    padding: 1rem;
+.ty .intro {
+    text-indent:    0;
+    line-height:    1.5rem;
+    padding-top:    0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top:     0;
+    margin-bottom:  0;
+    font-size:      calc(1rem + 2px);
+    position:       relative;
+    top:            -1px; /* HACK shift on baseline */
 }
 
-/* spaces as paragraph separators */
-
-.ty-basic p + p,
-.ty-basic blockquote + p,
-.ty-basic pre + p {
-    margin-top: 1em;
+.ty ul,
+.ty ol {
+    padding-top:    0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top:     0;
+    margin-bottom:  0;
 }
 
+.ty li {
+    line-height:    1.5rem;
+}
 
+.ty li ul,
+.ty li ol {
+    padding-top:    0;
+    padding-bottom: 0;
+}
 
+.ty-blocklist li {
+    padding-top:    0.5rem;
+}
 
+.ty pre {
+    padding:        1rem;
+    margin-top:     0.75rem;
+    margin-bottom:  0.75rem;
+    font-size:      0.8rem;
+    line-height:    1rem;
+}
 
-/* wider 2.0 line-height */
+.ty code {
+    line-height:    1rem;
+}
+
+/* indent */
+
+.ty p + p,
+.ty blockquote + p,
+.ty pre + p {
+  text-indent:      1em;
+}
+
+.ty hr {
+    text-align:     center;
+    line-height:    2rem;
+    height:         2rem;
+    border:         none;
+    margin-top:     0;
+    margin-bottom:  0;
+}
+
+.ty hr:before {
+    content:        "＊";
+    font-size:      1rem;
+    font-family:    serif;
+    opacity:        0.5;
+}
+
+/* double line-height */
 
 .ty-wide h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    padding: 1.25rem 0;
+    line-height:    2.5rem;
+    padding-top:    1.25rem;
+    padding-bottom: 1.25rem;
 }
 .ty-wide h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding: 1.25rem 0;
+    font-size:      1.5rem;
+    line-height:    2rem;
+    padding-top:    1.25rem;
+    padding-bottom: 1.25rem;
 }
 .ty-wide h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 1.25rem 0;
+    font-size:      1rem;
+    line-height:    1.5rem;
+    padding-top:    1.25rem;
+    padding-bottom: 1.25rem;
 }
 .ty-wide h4 {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size:      1rem;
+    line-height:    2rem;
 }
 
 .ty-wide p,
 .ty-wide blockquote,
 .ty-wide address {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size:      1rem;
+    line-height:    2rem;
 }
 
 .ty-wide ul,
 .ty-wide ol {
-    padding: 0.75rem 0 0.75rem 2rem;
+    padding-top:    0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .ty-wide ul,
 .ty-wide ol,
 .ty-wide li {
-    line-height: 1.5rem;
+    line-height:    1.5rem;
 }
 
 .ty-wide .ty-wide-blocklist {
-    padding: 0.25rem 0 0.25rem 2rem;
+    padding-top:    0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 .ty-wide-blocklist li {
-    line-height: 1.5rem;
-    padding: 0.25rem 0;
-}
-
-.ty-wide li ul,
-.ty-wide li ol {
-    padding: 0 0 0 1rem;
+    line-height:    1.5rem;
+    padding-top:    0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 .ty-wide blockquote {
-    margin: 0.75rem -1rem;
-    padding: 0.75rem 0.5rem 0.75rem 3rem;
-}
-
-.ty-wide pre {
-    margin: 1rem 0;
-    padding: 1rem;
+    margin:         0.75rem -1rem;
+    padding-top:    0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .ty-wide strong {
-    line-height: 1rem;
-}
-
-
-
-
-
-/* indent as paragraph seperators */
-
-.ty-indent p + p,
-.ty-indent blockquote + p,
-.ty-indent pre + p {
-    margin-top: 0;
-    text-indent: 1rem;
+    line-height:    1rem;
 }
