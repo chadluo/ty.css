@@ -1,9 +1,7 @@
 /**
- * ty.css
- * http://github.com/chadluo/ty.css
- *
- * @author yukirock<i@yukir.net>
- *
+ * ty.css | http://github.com/chadluo/ty.css
+ * out-of-box typography stylesheets
+ * yukirock<i@yukir.net>
  */
 
 
@@ -15,10 +13,23 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 
 
 /**
- * font size reset
+ * resets
  */
 @media screen,handheld { body { font-size: 16px; } }
 @media print           { body { font-size: 12pt; } }
+.ty h1,
+.ty h2,
+.ty h3,
+.ty h4,
+.ty h5,
+.ty h6,
+.ty p,
+.ty blockquote,
+.ty address {
+    margin-top:     0;
+    margin-bottom:  0;
+}
+
 
 /**
  * basic .ty
@@ -27,9 +38,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
  *   1.5 line-height
  *   indent
  */
-
-/* basic 1.5 line-height */
-
 
 .ty {
     padding-top:    0.25rem;
@@ -41,32 +49,24 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     line-height:    2.5rem;
     padding-top:    1rem;
     padding-bottom: 1rem;
-    margin-top:     0;
-    margin-bottom:  0;
 }
 .ty h2 {
     font-size:      1.5rem;
     line-height:    2rem;
     padding-top:    1rem;
     padding-bottom: 1rem;
-    margin-top:     0;
-    margin-bottom:  0;
 }
 .ty h3 {
     font-size:      1rem;
     line-height:    2rem;
     padding-top:    0.25rem;
     padding-bottom: 0.25rem;
-    margin-top:     0;
-    margin-bottom:  0;
 }
 .ty h4 {
     font-size:      1rem;
     line-height:    1.5rem;
-    margin-top:     0.5rem;
-    margin-bottom:  0.5rem;
-    padding-top:    0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top:    0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .ty p,
@@ -74,8 +74,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .ty address {
     font-size:      1rem;
     line-height:    1.5rem;
-    margin-top:     0;
-    margin-bottom:  0;
 }
 
 .ty .intro {
@@ -91,25 +89,26 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .ty ul,
-.ty ol {
+.ty ol,
+.ty dl {
     padding-top:    0.5rem;
     padding-bottom: 0.5rem;
     margin-top:     0;
     margin-bottom:  0;
 }
 
-.ty li {
+.ty li,
+.ty dt,
+.ty dd {
     line-height:    1.5rem;
 }
 
 .ty li ul,
-.ty li ol {
+.ty li ol,
+.ty dd ul,
+.ty dd ol {
     padding-top:    0;
     padding-bottom: 0;
-}
-
-.ty-blocklist li {
-    padding-top:    0.5rem;
 }
 
 .ty pre {
@@ -120,6 +119,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     line-height:    1rem;
 }
 
+.ty pre + pre {
+    margin-top:     1rem;
+}
+
 .ty code {
     line-height:    1rem;
 }
@@ -127,8 +130,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* indent */
 
 .ty p + p,
-.ty blockquote + p,
-.ty pre + p {
+.ty blockquote + p {
   text-indent:      1em;
 }
 
@@ -142,13 +144,18 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .ty hr:before {
-    content:        "＊";
+    content:        "\FF0A";
     font-size:      1rem;
     font-family:    serif;
     opacity:        0.5;
 }
 
 /* double line-height */
+
+.ty-wide {
+    padding-top:    0;
+    padding-bottom: 0;
+}
 
 .ty-wide h1 {
     line-height:    2.5rem;
@@ -179,6 +186,17 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     line-height:    2rem;
 }
 
+.ty-wide .intro {
+    text-indent:    0;
+    padding-top:    0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top:     0;
+    margin-bottom:  0;
+    font-size:      calc(1rem + 2px);
+    position:       relative;
+    top:            -1px; /* HACK shift on baseline */
+}
+
 .ty-wide ul,
 .ty-wide ol {
     padding-top:    0.75rem;
@@ -196,12 +214,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     padding-bottom: 0.25rem;
 }
 
-.ty-wide-blocklist li {
-    line-height:    1.5rem;
-    padding-top:    0.25rem;
-    padding-bottom: 0.25rem;
-}
-
 .ty-wide blockquote {
     margin:         0.75rem -1rem;
     padding-top:    0.75rem;
@@ -211,3 +223,14 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .ty-wide strong {
     line-height:    1rem;
 }
+
+.ty-p-spacing p {
+    text-indent:    0;
+}
+
+.ty-p-spacing p + p,
+.ty-p-spacing blockquote + p {
+    text-indent:    0;
+    margin-top:     1em;
+}
+

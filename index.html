@@ -3,12 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <title>ty.css</title>
+<link href='http://fonts.googleapis.com/css?family=Lobster|Alegreya:400' rel='stylesheet' type='text/css'>
+<style>
+#logo {
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+  position: relative;
+}
+#logo a {
+  font-size: 160px;
+  font-family: 'Lobster', cursive;
+  color: #000;
+  text-decoration: none;
+}
+#logo a:hover {
+  color: #ccc;
+}
+.ty {
+  font-family: 'Alegreya', serif;
+  max-width: 640px;
+  margin: auto;
+}
+.ty p {
+  position: relative;
+  top: 50px;
+  left: 60px;
+  margin: 0;
+}
+p a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dotted #ccc;
+}
+p a:hover {
+  border-bottom: 1px dotted #000;
+}
+</style>
 </head>
 <body>
-<section class="ty-cjk">
-    <h1 id="logo"><a href="//github.com/chadluo/ty.css" title="view on github">ty.css</a></h1>
-    <p>I am doing the vertical.</p>
-    <p>See <a href="demo.html">cjk demo</a> / <a href="demo-latin.html">latin demo</a>.</p>
+<section class="ty">
+    <h1 id="logo"><a href="http://github.com/chadluo/ty.css" title="view on github">ty.css</a></h1>
+    <p>Out-of-box typography stylesheets.</p>
+    <p>See <a href="demo-cjk.html">CJK demo</a> / <a href="demo-latin.html">latin demo</a>.</p>
 </section>
 </body>
 </html>

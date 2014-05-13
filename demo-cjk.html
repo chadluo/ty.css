@@ -238,16 +238,14 @@ styles]
   <p><strong>千万不要把 CSS 样式用作 JavaScript 钩子。</strong>把 JS 行为与样式混在一起将无法对其分别处理。</p>
   <p>如果你要把 JS 和某些标记绑定起来的话，写一个 JS 专用的 class。简单地说就是划定一个前缀 <code>.js-</code> 的命名空间，例如 <code>.js-toggle</code>，<code>.js-drag-and-drop</code>。这意味着我们可以通过 class 同时绑定 JS 和 CSS 而不会因为冲突而引发麻烦。</p>
   <pre><code>&lt;th class="is-sortable  js-is-sortable"&gt;
-&lt;/th&gt;
-  </code></pre>
+&lt;/th&gt;</code></pre>
   <p>上面的这个标记有两个 class，你可以用其中一个来给这个可排序的表格栏添加样式，用另一个添加排序功能。</p>
   <h3>
     <a name="i18n" class="anchor" href="#i18n"><span class="octicon octicon-link"></span></a>I18n</h3>
   <p>虽然我（该 CSS Guideline 文档原作者 Harry Roberts）是个英国人，而且我一向拼写 <i>colour</i> 而非 <i>color</i>，但是为了追求统一，我认为在 CSS 中用美式拼法更佳。CSS 以及其它多数语言都是以美式拼法编写，所以如果在 <code>.colour-picker{}</code> 中写 <code>color:red</code> 就缺乏统一性。我以前主张同时用两种拼法，例如：</p>
   <pre><code>.color-picker,
 .colour-picker{
-}
-  </code></pre>
+}</code></pre>
   <p>但是我最近参与了一份规模庞大的 Sass 项目，这个项目中有许多的颜色变量（例如 <code>$brand-color</code>，<code>$highlight-color</code> 等等），每个变量要维护两种拼法实在辛苦，要查找并替换时也需要两倍的工作量。</p>
   <p>所以为了统一，把所有的 class 与变量都以你参与的项目的惯用拼法命名即可。</p>
   <h2>
@@ -267,10 +265,9 @@ styles]
  *
  * We do not prefix lines of code with an asterisk as to do so would inhibit
  * copy and paste.
- */
+ */</code></pre>
 
-
-/**
+  <pre><code>/**
  * 这是一个文档块（DocBlock）风格的注释。
  *
  * 这里开始是描述更详细、篇幅更长的注释正文。当然，我们要把行宽控制在 80 字以内。
@@ -282,8 +279,7 @@ styles]
     &lt;/div&gt;
  *
  * 如果是注释内嵌的标记的话，在它前面不加星号，否则会被复制进去。
- */
-  </code></pre>
+ */</code></pre>
   <p>在注释中应当尽量详细描述代码，因为对你来说清晰易懂的内容对其他人可能并非如此。每写一部分代码就要专门写注释以详解。</p>
   <h3>
     <a name="%E6%B3%A8%E9%87%8A%E7%9A%84%E6%8B%93%E5%B1%95%E7%94%A8%E6%B3%95" class="anchor" href="#%E6%B3%A8%E9%87%8A%E7%9A%84%E6%8B%93%E5%B1%95%E7%94%A8%E6%B3%95"><span class="octicon octicon-link"></span></a>注释的拓展用法</h3>
@@ -297,14 +293,12 @@ styles]
   <p>你应当避免过分修饰选择器，例如如果你能写 <code>.nav{}</code> 就尽量不要写 <code>ul.nav{}</code>。过分修饰选择器将影响性能，影响 class 复用性，增加选择器私有度。这些都是你应当竭力避免的。</p>
   <p>不过有时你可能希望告诉其他开发者 class 的使用范围。以 <code>.product-page</code> 为例，这个 class 看起来像是一个根容器，可能是 <code>html</code> 或者 <code>body</code> 元素，但是仅凭 <code>.product-page</code> 则无法判断。</p>
   <p>我们可以在选择器前加上准修饰（即将前面的类型选择器注释掉）来描述我们规划的 class 作用范围：</p>
-  <pre><code>/*html*/.product-page{}
-  </code></pre>
+  <pre><code>/*html*/.product-page{}</code></pre>
   <p>这样我们就能准确获知该 class 的作用范围而不会影响复用性。</p>
   <p>其它例子如：</p>
   <pre><code>/*ol*/.breadcrumb{}
 /*p*/.intro{}
-/*ul*/.image-thumbs{}
-  </code></pre>
+/*ul*/.image-thumbs{}</code></pre>
   <p>这样我们就能在不影响代码私有度的前提下获知 class 作用范围。</p>
   <h4>
     <a name="%E4%BB%A3%E7%A0%81%E6%A0%87%E7%AD%BE" class="anchor" href="#%E4%BB%A3%E7%A0%81%E6%A0%87%E7%AD%BE"><span class="octicon octicon-link"></span></a>代码标签</h4>
@@ -317,8 +311,7 @@ styles]
 /**
  * ^grids ^lists ^tables
  */
-.matrix{}
-  </code></pre>
+.matrix{}</code></pre>
   <p>这些标签可以使得其他开发者快速找到相关代码。如果一个开发者需要查找和列表相关的部分，他只要搜索 <code>^lists</code> 就能快速定位到 <code>.nav</code>，<code>.matrix</code> 以及其它相关部分。</p>
   <h4>
     <a name="%E7%BB%A7%E6%89%BF%E6%A0%87%E8%AE%B0" class="anchor" href="#%E7%BB%A7%E6%89%BF%E6%A0%87%E8%AE%B0"><span class="octicon octicon-link"></span></a>继承标记</h4>
@@ -327,14 +320,12 @@ styles]
   <pre><code>/**
  * Extend `.foo` in theme.css
  */
- .foo{}
-  </code></pre>
+ .foo{}</code></pre>
   <p>在元素的拓展样式中：</p>
   <pre><code>/**
  * Extends `.foo` in base.css
  */
- .bar{}
-  </code></pre>
+ .bar{}</code></pre>
   <p>这样一来我们就能在两块相隔很远的代码间建立紧密联系。</p>
   <hr><h2>
     <a name="%E7%BC%96%E5%86%99-css" class="anchor" href="#%E7%BC%96%E5%86%99-css"><span class="octicon octicon-link"></span></a>编写 CSS</h2>
@@ -350,8 +341,7 @@ styles]
 
 .room--kitchen{}
 .room--bedroom{}
-.room--bathroom{}
-  </code></pre>
+.room--bathroom{}</code></pre>
   <p>我们在屋子里有许多房间，它们都有共同的部分：它们都包含地板、天花板、墙壁和门。这些共享的部分我们可以放到一个抽象的 <code>.room{}</code> class 中。不过我们还有其它与众不同的房间：一个厨房可能有地砖，卧室可能有地毯，洗手间可能没有窗户但是卧室会有，每个房间的墙壁颜色也许也会不一样。面向对象 CSS 的思路使得我们把相同部分抽象出来组成结构部分，然后用更具体的 class 来拓展这些特征并添加特殊的处理方法。</p>
   <p>所以比起编写大量的特殊模块，应当努力找出这些模块中重复的设计模式并将其抽象出来，写成一个可以复用的 class，将其用作基础然后编写其它拓展模块的特殊情形。</p>
   <p>当你要编写一个新组件时，将其拆分成结构和外观。编写结构部分时用最通用 class 以保证复用性，编写外观时用更具体的 class 来添加设计方法。</p>
@@ -369,8 +359,7 @@ styles]
   <pre><code>@mixin font-size($font-size){
     font-size:$font-size +px;
     font-size:$font-size / $base-font-size +rem;
-}
-  </code></pre>
+}</code></pre>
   <p>我只在已经固定尺寸的元素上使用 px，包括图片以及尺寸已经用 px 固定的 CSS Sprite。</p>
   <h3>
     <a name="%E5%AD%97%E5%8F%B7" class="anchor" href="#%E5%AD%97%E5%8F%B7"><span class="octicon octicon-link"></span></a>字号</h3>
@@ -440,8 +429,7 @@ styles]
   <pre><code>.header{}
 .header .site-nav{}
 .header .site-nav li{}
-.header .site-nav li a{}
-  </code></pre>
+.header .site-nav li a{}</code></pre>
   <p>这样的写法在普通 CSS 里完全用不到。以下为<strong>不好的</strong> Sass 写法：</p>
   <pre><code>.header{
     .site-nav{
@@ -449,15 +437,13 @@ styles]
             a{}
         }
     }
-}
-  </code></pre>
+}</code></pre>
   <p>如果你用 Sass 的话，尽量这么写：</p>
   <pre><code>.header{}
 .site-nav{
     li{}
     a{}
-}
-  </code></pre>
+}</code></pre>
 </section>
 </body>
 </html>
