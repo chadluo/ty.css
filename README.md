@@ -2,31 +2,29 @@
 
 ***
 
-试图提供简单易用的排版。
+out-of-box typography.
 
-**它干的什么活：**
+## does
 
-* 垂直间距
-* 字号
+* vertical spacing
+* sizing
 
-没了。
+## ignores
 
-**它不干什么活：**
-
-* css reset
-* 字体
-* 格栅系统
+* font
+* grid system
 * ruby
-* 竖排
+* vertical
 
-请自行搭配你惯用的框架。
+fit with existing grid systems.
 
-**它怎么的干活：**
+## how
 
-1. 在 `article` 或其它正文的亲元素添加 `.ty-cjk` 的 class
-2. `<link rel="stylesheet" href="ty.css" media="screen" type="text/css">`
-3. 如果列表项（`li`）较长，建议使用 `.ty-cjk-blocklist` 包装 `ol` 或 `ul` 元素。嗯英文这块我回头补上。
+    <article class="ty">
+    <link rel="stylesheet" href="ty.css" media="screen" type="text/css">
 
-**授权**
+## license
 
-见 LICENSE.md。
+*"THE LEMONADE LICENSE":*
+
+<i@yukir.net> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a lemonade in return.
