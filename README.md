@@ -1,7 +1,5 @@
 # [ty.css](http://yukir.net/ty.css/)
 
-***
-
 out-of-box typography.
 
 ## does
