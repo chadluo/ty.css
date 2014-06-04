@@ -198,15 +198,21 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 .ty-wide ul,
-.ty-wide ol {
-    padding-top:    0.75rem;
-    padding-bottom: 0.75rem;
+.ty-wide ol,
+.ty-wide dl {
+    padding-top:    0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .ty-wide ul,
 .ty-wide ol,
 .ty-wide li {
-    line-height:    1.5rem;
+    line-height:    2rem;
+}
+
+.ty-wide dt {
+    margin-top:     1rem;
+    line-height:    2rem;
 }
 
 .ty-wide .ty-wide-blocklist {
